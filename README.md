@@ -9,6 +9,6 @@ App to explore jetpack compose
 #### Preview
 
 
-Shared Element Transition #1            |  Shared Element Transition #2            
-:-------------------------:|:----------------------------:
-<img src="images/amphitrite_1.jpg">    |  <img src="images/amphitrite_2.jpg"> 
+|    Shared Element Transition #1     |    Shared Element Transition #2     |
+|:-----------------------------------:|:-----------------------------------:|
+| <img src="images/amphitrite_1.jpg"> | <img src="images/amphitrite_2.jpg"> |
