@@ -4,7 +4,7 @@ App to explore jetpack compose
 
 ## Shared Element Transition
     
-   Screen element transition
+   Screen element transition using compose lib
    
 #### Preview
 
