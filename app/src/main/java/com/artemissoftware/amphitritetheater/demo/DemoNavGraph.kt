@@ -4,7 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.sharedElementTransitionNavGraph
+import androidx.navigation.compose.rememberNavController
+import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
+import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 
 @Composable
 fun DemoNavGraph(
@@ -18,6 +20,8 @@ fun DemoNavGraph(
             DemoSelectorScreen(navController)
         }
 
-        sharedElementTransitionNavGraph(navController = navController)
+        composable(route = SHARED_ELEMENT_TRANSITION_GRAPH) {
+            SharedElementTransitionNavGraph(navController = rememberNavController())
+        }
     }
 }

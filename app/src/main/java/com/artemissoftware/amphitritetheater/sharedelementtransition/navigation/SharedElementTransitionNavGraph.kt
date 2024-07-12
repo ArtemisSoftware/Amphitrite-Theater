@@ -1,10 +1,14 @@
+@file:OptIn(ExperimentalSharedTransitionApi::class)
+
 package com.artemissoftware.amphitritetheater.sharedelementtransition.navigation
 
-import androidx.navigation.NavGraphBuilder
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionLayout
+import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navigation
 import androidx.navigation.navArgument
 import com.artemissoftware.amphitritetheater.sharedelementtransition.ImageDetailScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.ImageListScreen
@@ -12,37 +16,43 @@ import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.
 
 const val SHARED_ELEMENT_TRANSITION_GRAPH = "shared_element_transition_graph"
 
-fun NavGraphBuilder.sharedElementTransitionNavGraph(
+@Composable
+fun SharedElementTransitionNavGraph(
     navController: NavHostController
 ) {
-    navigation(
-        route = SHARED_ELEMENT_TRANSITION_GRAPH,
-        startDestination = Route.ImageList.route,
-    ) {
-
-        composable(route = Route.ImageList.route) {
-            ImageListScreen(
-                onImageClick = { imageId ->
-                    navController.navigate(Route.ImageDetail.passImageId(imageId))
-                },
-            )
-        }
-
-        composable(
-            route = Route.ImageDetail.route,
-            arguments = listOf(
-                navArgument(name = IMAGE_ID){
-                    type = NavType.IntType
-                }
-            )
+    SharedTransitionLayout {
+        NavHost(
+            navController = navController,
+            route = SHARED_ELEMENT_TRANSITION_GRAPH,
+            startDestination = Route.ImageList.route,
         ) {
-            val imageId = it.arguments?.getInt(IMAGE_ID) ?: 1
-            ImageDetailScreen(
-                imageId = imageId,
-                onClick = {
-                    navController.popBackStack()
-                },
-            )
+
+            composable(route = Route.ImageList.route) {
+                ImageListScreen(
+                    animatedVisibilityScope = this@composable,
+                    onImageClick = { imageId ->
+                        navController.navigate(Route.ImageDetail.passImageId(imageId))
+                    },
+                )
+            }
+
+            composable(
+                route = Route.ImageDetail.route,
+                arguments = listOf(
+                    navArgument(name = IMAGE_ID){
+                        type = NavType.IntType
+                    }
+                )
+            ) {
+                val imageId = it.arguments?.getInt(IMAGE_ID) ?: 1
+                ImageDetailScreen(
+                    animatedVisibilityScope = this@composable,
+                    imageId = imageId,
+                    onClick = {
+                        navController.popBackStack()
+                    },
+                )
+            }
         }
     }
 }

@@ -1,5 +1,12 @@
+@file:OptIn(ExperimentalSharedTransitionApi::class, ExperimentalSharedTransitionApi::class,
+    ExperimentalSharedTransitionApi::class
+)
+
 package com.artemissoftware.amphitritetheater.sharedelementtransition
 
+import androidx.compose.animation.AnimatedVisibilityScope
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionScope
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,7 +21,8 @@ import com.artemissoftware.amphitritetheater.sharedelementtransition.composables
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme
 
 @Composable
-internal fun ImageListScreen(
+internal fun SharedTransitionScope.ImageListScreen(
+    animatedVisibilityScope: AnimatedVisibilityScope,
     onImageClick: (Int) -> Unit
 ) {
     LazyColumn(
@@ -28,6 +36,7 @@ internal fun ImageListScreen(
             key = { it.id }
         ){ image ->
             ImageElementItem(
+                animatedVisibilityScope = animatedVisibilityScope,
                 modifier = Modifier.fillMaxWidth(),
                 image = image,
                 onClick = onImageClick
@@ -36,12 +45,13 @@ internal fun ImageListScreen(
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
 private fun ImageListScreenPreview() {
     AmphitriteTheaterTheme {
-        ImageListScreen(
-            onImageClick = {}
-        )
+//        ImageListScreen(
+//            onImageClick = {}
+//        )
     }
 }
