@@ -5,10 +5,12 @@ import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.
 sealed class Destination(val route: String, val title: String) {
     data object Home : Destination(route = "home", title = "Demo")
     data object SharedElementTransition : Destination(route = SHARED_ELEMENT_TRANSITION_GRAPH, title = "Shared Element Transition")
+    data object Counter : Destination(route = "counter", title = "Animated counter")
 
     companion object{
         val demos = listOf(
-            SharedElementTransition
+            SharedElementTransition,
+            Counter
         )
     }
 }
