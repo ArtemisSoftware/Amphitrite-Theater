@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 
-package com.artemissoftware.amphitritetheater.webbrowser
+package com.artemissoftware.amphitritetheater.web.webbrowser
 
 import android.graphics.Bitmap
 import android.util.Log
@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import com.artemissoftware.amphitritetheater.Greeting
 import com.artemissoftware.amphitritetheater.R
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme
+import com.artemissoftware.amphitritetheater.web.WebConstants
 import com.kevinnzou.web.AccompanistWebViewClient
 import com.kevinnzou.web.LoadingState
 import com.kevinnzou.web.WebView
@@ -50,7 +51,7 @@ import com.kevinnzou.web.rememberWebViewState
 @Composable
 fun WebBrowserScreen() {
     
-    var url by remember { mutableStateOf("https://www.dc.com") }
+    val url by remember { mutableStateOf(WebConstants.DC_URL) }
     val state = rememberWebViewState(url = url)
     val navigator = rememberWebViewNavigator()
 

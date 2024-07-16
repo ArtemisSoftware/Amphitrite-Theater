@@ -1,4 +1,4 @@
-package com.artemissoftware.amphitritetheater.webview
+package com.artemissoftware.amphitritetheater.web.webview
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -25,6 +25,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import com.artemissoftware.amphitritetheater.web.WebConstants
 
 @Composable
 fun WebViewScreen() {
@@ -42,7 +43,7 @@ fun WebViewScreen() {
         object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
                 super.onAvailable(network)
-                loadURL.value = WebConstants.DEFAULT_URL
+                loadURL.value = WebConstants.DEFAULT_WEB_VIEW_URL
             }
 
             override fun onLost(network: Network) {
@@ -62,7 +63,7 @@ fun WebViewScreen() {
                 val networkInfo = connectivityManager.activeNetworkInfo
 
                 if (networkInfo != null && networkInfo.isConnected) {
-                    loadURL.value = WebConstants.DEFAULT_URL
+                    loadURL.value = WebConstants.DEFAULT_WEB_VIEW_URL
                 } else {
                     loadURL.value = "file:///android_asset/offline.html"
                 }
@@ -106,7 +107,7 @@ fun WebViewScreen() {
 
         val networkState = connectivityManager.activeNetworkInfo
         if (networkState != null && networkState.isConnected) {
-            loadURL.value = WebConstants.DEFAULT_URL
+            loadURL.value = WebConstants.DEFAULT_WEB_VIEW_URL
         } else {
             loadURL.value = "file:///android_asset/offline.html"
         }

@@ -8,8 +8,8 @@ import androidx.navigation.compose.rememberNavController
 import com.artemissoftware.amphitritetheater.animation.CounterApp
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
-import com.artemissoftware.amphitritetheater.webbrowser.WebBrowserScreen
-import com.artemissoftware.amphitritetheater.webview.WebViewScreen
+import com.artemissoftware.amphitritetheater.web.webbrowser.WebBrowserScreen
+import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
 
 @Composable
 fun DemoNavGraph(
