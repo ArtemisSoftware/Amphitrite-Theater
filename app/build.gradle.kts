@@ -64,6 +64,8 @@ dependencies {
 
     implementation(libs.coil)
 
+    implementation(libs.compose.webview)
+
 
     testImplementation(libs.junit)
 

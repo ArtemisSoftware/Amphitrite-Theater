@@ -3,4 +3,5 @@
     <string name="demos">Demos</string>
     <string name="increment">Increment</string>
     <string name="decrement">Decrement</string>
+    <string name="web_browser">Web Browser</string>
 </resources>

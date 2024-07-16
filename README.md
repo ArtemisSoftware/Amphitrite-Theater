@@ -23,3 +23,14 @@ Two code version for an animated counter to increment and decrement
 |         Animated Counter #1         |         
 |:-----------------------------------:|
 | <img src="images/amphitrite_3.png"> |
+
+## Web Browser
+
+A custom web browser
+
+#### Preview
+
+
+|           Web Browser #1            |         
+|:-----------------------------------:|
+| <img src="images/amphitrite_4.png"> |
