@@ -9,6 +9,7 @@ import com.artemissoftware.amphitritetheater.animation.CounterApp
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.webbrowser.WebBrowserScreen
+import com.artemissoftware.amphitritetheater.webview.WebViewScreen
 
 @Composable
 fun DemoNavGraph(
@@ -32,6 +33,10 @@ fun DemoNavGraph(
 
         composable(route = Destination.WebBrowser.route) {
             WebBrowserScreen()
+        }
+
+        composable(route = Destination.WebView.route) {
+            WebViewScreen()
         }
     }
 }
