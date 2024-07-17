@@ -1,4 +1,4 @@
-package com.artemissoftware.amphitritetheater.animation
+package com.artemissoftware.amphitritetheater.animation.counter
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,8 +19,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.artemissoftware.amphitritetheater.R
-import com.artemissoftware.amphitritetheater.animation.counter.AnimatedCounter
-import com.artemissoftware.amphitritetheater.animation.counter.AnimatedCounterV2
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme
 
 @Composable
