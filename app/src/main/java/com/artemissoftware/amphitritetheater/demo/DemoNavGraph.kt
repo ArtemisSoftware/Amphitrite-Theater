@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.artemissoftware.amphitritetheater.animation.counter.CounterApp
+import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.web.webbrowser.WebBrowserScreen
@@ -37,6 +38,10 @@ fun DemoNavGraph(
 
         composable(route = Destination.WebView.route) {
             WebViewScreen()
+        }
+
+        composable(route = Destination.Stopwatch.route) {
+            StopwatchScreen()
         }
     }
 }
