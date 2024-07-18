@@ -9,6 +9,7 @@ sealed class Destination(val route: String, val title: String) {
     data object WebBrowser : Destination(route = "web_browser", title = "Web Browser")
     data object WebView : Destination(route = "web_view", title = "Web View")
     data object Stopwatch : Destination(route = "stopwatch", title = "Stopwatch")
+    data object Speedometer : Destination(route = "speedometer", title = "Speedometer")
 
     companion object{
         val demos = listOf(
@@ -16,7 +17,8 @@ sealed class Destination(val route: String, val title: String) {
             Counter,
             WebBrowser,
             WebView,
-            Stopwatch
+            Stopwatch,
+            Speedometer
         )
     }
 }

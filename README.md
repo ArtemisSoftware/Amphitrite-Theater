@@ -34,3 +34,14 @@ A custom web browser and a webview
 |             Web Browser             |              Web View               |
 |:-----------------------------------:|:-----------------------------------:|
 | <img src="images/amphitrite_4.png"> | <img src="images/amphitrite_5.png"> |
+
+## Speedometer
+
+An animated speedometer
+
+#### Preview
+
+
+|             Speedometer             |         
+|:-----------------------------------:|
+| <img src="images/amphitrite_6.png"> |

@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.artemissoftware.amphitritetheater.animation.counter.CounterApp
+import com.artemissoftware.amphitritetheater.animation.speedometer.SpeedometerScreen
 import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
@@ -42,6 +43,10 @@ fun DemoNavGraph(
 
         composable(route = Destination.Stopwatch.route) {
             StopwatchScreen()
+        }
+
+        composable(route = Destination.Speedometer.route) {
+            SpeedometerScreen()
         }
     }
 }
