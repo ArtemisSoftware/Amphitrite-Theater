@@ -45,3 +45,14 @@ An animated speedometer
 |             Speedometer             |         
 |:-----------------------------------:|
 | <img src="images/amphitrite_6.png"> |
+
+## Battery
+
+Custom composable representing a battery
+
+#### Preview
+
+
+|             Battery #1              |         
+|:-----------------------------------:|
+| <img src="images/amphitrite_7.png"> |
