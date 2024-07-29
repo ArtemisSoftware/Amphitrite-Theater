@@ -4,4 +4,6 @@
     <string name="increment">Increment</string>
     <string name="decrement">Decrement</string>
     <string name="web_browser">Web Browser</string>
+    <string name="sort_list">Sort List</string>
+    <string name="new_list">New list</string>
 </resources>
