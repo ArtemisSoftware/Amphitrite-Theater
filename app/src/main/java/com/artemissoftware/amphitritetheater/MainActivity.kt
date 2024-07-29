@@ -13,10 +13,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.artemissoftware.amphitritetheater.animation.bubblesort.BubbleSortViewModel
 import com.artemissoftware.amphitritetheater.demo.DemoNavGraph
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme
 
 class MainActivity : ComponentActivity() {
+
+    private val bubbleSortViewModel = BubbleSortViewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,6 +29,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Surface(modifier = Modifier.padding(innerPadding)) {
                         DemoNavGraph(
+                            bubbleSortViewModel = bubbleSortViewModel,
                             navController = rememberNavController(),
                         )
                     }

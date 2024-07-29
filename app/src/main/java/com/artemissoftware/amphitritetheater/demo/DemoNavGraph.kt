@@ -8,6 +8,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.artemissoftware.amphitritetheater.animation.bubblesort.BubbleSortScreen
+import com.artemissoftware.amphitritetheater.animation.bubblesort.BubbleSortViewModel
 import com.artemissoftware.amphitritetheater.animation.counter.CounterApp
 import com.artemissoftware.amphitritetheater.animation.speedometer.SpeedometerScreen
 import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
@@ -20,6 +22,7 @@ import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
 @Composable
 fun DemoNavGraph(
     navController: NavHostController,
+    bubbleSortViewModel: BubbleSortViewModel,
 ) {
     NavHost(
         navController = navController,
@@ -63,6 +66,10 @@ fun DemoNavGraph(
                     )
                 }
             }
+        }
+
+        composable(route = Destination.Bubblesort.route) {
+            BubbleSortScreen(viewmodel = bubbleSortViewModel)
         }
     }
 }
