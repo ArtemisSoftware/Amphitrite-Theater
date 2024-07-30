@@ -18,6 +18,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.artemissoftware.amphitritetheater.R
+import com.artemissoftware.amphitritetheater.animation.bubblesort.composables.SortBox
 import com.artemissoftware.amphitritetheater.animation.bubblesort.domain.model.InteractionInfo
 import com.artemissoftware.amphitritetheater.animation.bubblesort.models.SortItem
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme

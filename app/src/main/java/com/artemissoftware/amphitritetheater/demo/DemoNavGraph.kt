@@ -16,6 +16,7 @@ import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
 import com.artemissoftware.amphitritetheater.battery.Battery
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
+import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
 import com.artemissoftware.amphitritetheater.web.webbrowser.WebBrowserScreen
 import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
 
@@ -70,6 +71,9 @@ fun DemoNavGraph(
 
         composable(route = Destination.Bubblesort.route) {
             BubbleSortScreen(viewmodel = bubbleSortViewModel)
+        }
+        composable(route = Destination.ThreeDGraph.route) {
+            ThreeDimensionGraphScreen()
         }
     }
 }
