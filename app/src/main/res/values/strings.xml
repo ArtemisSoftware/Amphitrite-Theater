@@ -6,4 +6,6 @@
     <string name="web_browser">Web Browser</string>
     <string name="sort_list">Sort List</string>
     <string name="new_list">New list</string>
+    <string name="preferred_programming_languages">Preferred Programming Languages</string>
+    <string name="show_description">Show description</string>
 </resources>
