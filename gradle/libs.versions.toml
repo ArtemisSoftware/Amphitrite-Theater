@@ -14,6 +14,7 @@ composeAnimation = "1.7.0-alpha07"
 coil = "2.6.0"
 accompanist = "0.35.1-alpha"
 compose-webview = "0.33.6"
+palette-ktx = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +40,8 @@ coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 accompanist-webview = { group = "com.google.accompanist", name = "accompanist-webview", version.ref = "accompanist" }
 
 compose-webview = { group = "io.github.kevinnzou", name = "compose-webview", version.ref = "compose-webview" }
+
+palette-ktx = { group = "androidx.palette", name = "palette-ktx", version.ref = "palette-ktx" }
 
 
 [plugins]

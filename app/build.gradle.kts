@@ -66,6 +66,8 @@ dependencies {
 
     implementation(libs.compose.webview)
 
+    implementation(libs.palette.ktx)
+
 
     testImplementation(libs.junit)
 
