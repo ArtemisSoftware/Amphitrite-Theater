@@ -56,3 +56,25 @@ Custom composable representing a battery
 |             Battery #1              |         
 |:-----------------------------------:|
 | <img src="images/amphitrite_7.png"> |
+
+## Bubble Sort
+
+Visual representation of the bubble sort algorithm
+
+#### Preview
+
+
+|           Bubble Sort #1            |         
+|:-----------------------------------:|
+| <img src="images/amphitrite_8.png"> |
+
+## 3D Graph
+
+3 dimensional graph
+
+#### Preview
+
+
+|             3D Graph #1             |         
+|:-----------------------------------:|
+| <img src="images/amphitrite_9.png"> |
