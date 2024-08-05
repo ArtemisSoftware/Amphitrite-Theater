@@ -3,6 +3,8 @@ package com.artemissoftware.amphitritetheater.demo
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -16,6 +18,7 @@ import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
 import com.artemissoftware.amphitritetheater.battery.Battery
 import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteScreen
 import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteViewModel
+import com.artemissoftware.amphitritetheater.dynamictabselector.DynamicTabSelector
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
@@ -72,7 +75,7 @@ fun DemoNavGraph(
             }
         }
 
-        composable(route = Destination.Bubblesort.route) {
+        composable(route = Destination.BubbleSort.route) {
             BubbleSortScreen(viewmodel = bubbleSortViewModel)
         }
         composable(route = Destination.ThreeDGraph.route) {
@@ -80,6 +83,14 @@ fun DemoNavGraph(
         }
         composable(route = Destination.ColorPalette.route) {
             ColorPaletteScreen(viewModel = colorPaletteViewModel)
+        }
+        composable(route = Destination.DynamicTabSelector.route) {
+            SingleContent {
+                DynamicTabSelector(
+                    tabs = listOf("Tab 1", "Tab 2", "Tab 3"),
+                    onTabSelected =  {}
+                )
+            }
         }
     }
 }

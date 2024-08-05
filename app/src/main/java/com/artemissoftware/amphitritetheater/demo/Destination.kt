@@ -11,9 +11,10 @@ sealed class Destination(val route: String, val title: String) {
     data object Stopwatch : Destination(route = "stopwatch", title = "Stopwatch")
     data object Speedometer : Destination(route = "speedometer", title = "Speedometer")
     data object Battery : Destination(route = "battery", title = "Battery")
-    data object Bubblesort : Destination(route = "bubblesort", title = "Bubblesort")
-    data object ThreeDGraph : Destination(route = "three_dimension", title = "3DGraph")
+    data object BubbleSort : Destination(route = "bubblesort", title = "Bubblesort")
+    data object ThreeDGraph : Destination(route = "three_dimension", title = "3D Graph")
     data object ColorPalette : Destination(route = "color_palette", title = "Color Palette")
+    data object DynamicTabSelector : Destination(route = "dynamic_tab_selector", title = "Dynamic Tab Selector")
 
     companion object{
         val demos = listOf(
@@ -24,9 +25,10 @@ sealed class Destination(val route: String, val title: String) {
             Stopwatch,
             Speedometer,
             Battery,
-            Bubblesort,
+            BubbleSort,
             ThreeDGraph,
-            ColorPalette
+            ColorPalette,
+            DynamicTabSelector
         )
     }
 }

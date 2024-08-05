@@ -89,3 +89,14 @@ Change screen according to picture color palette
 |           Color Palette #1           |           Color Palette #2           |
 |:------------------------------------:|:------------------------------------:|
 | <img src="images/amphitrite_10.png"> | <img src="images/amphitrite_11.png"> |
+
+## Dynamic Tab Selector
+
+Pill selector
+
+#### Preview
+
+
+|       Dynamic Tab Selector #1        |         
+|:------------------------------------:|
+| <img src="images/amphitrite_12.png"> |
