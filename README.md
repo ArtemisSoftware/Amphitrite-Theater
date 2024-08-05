@@ -78,3 +78,14 @@ Visual representation of the bubble sort algorithm
 |             3D Graph #1             |         
 |:-----------------------------------:|
 | <img src="images/amphitrite_9.png"> |
+
+## Color Palette
+
+Change screen according to picture color palette
+
+#### Preview
+
+
+|           Color Palette #1           |           Color Palette #2           |
+|:------------------------------------:|:------------------------------------:|
+| <img src="images/amphitrite_10.png"> | <img src="images/amphitrite_11.png"> |
