@@ -5,5 +5,6 @@ import androidx.palette.graphics.Palette
 
 data class ColorPaletteState(
     val imageBitmap: ImageBitmap? = null,
-    val colorPalette: Palette? = null
+    val palette: Palette? = null,
+    val colorPalette: ColorPalette = ColorPalette()
 )

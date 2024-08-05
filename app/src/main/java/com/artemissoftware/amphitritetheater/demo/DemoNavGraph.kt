@@ -14,6 +14,8 @@ import com.artemissoftware.amphitritetheater.animation.counter.CounterApp
 import com.artemissoftware.amphitritetheater.animation.speedometer.SpeedometerScreen
 import com.artemissoftware.amphitritetheater.animation.stopwatch.StopwatchScreen
 import com.artemissoftware.amphitritetheater.battery.Battery
+import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteScreen
+import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteViewModel
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
@@ -24,6 +26,7 @@ import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
 fun DemoNavGraph(
     navController: NavHostController,
     bubbleSortViewModel: BubbleSortViewModel,
+    colorPaletteViewModel: ColorPaletteViewModel,
 ) {
     NavHost(
         navController = navController,
@@ -74,6 +77,9 @@ fun DemoNavGraph(
         }
         composable(route = Destination.ThreeDGraph.route) {
             ThreeDimensionGraphScreen()
+        }
+        composable(route = Destination.ColorPalette.route) {
+            ColorPaletteScreen(viewModel = colorPaletteViewModel)
         }
     }
 }

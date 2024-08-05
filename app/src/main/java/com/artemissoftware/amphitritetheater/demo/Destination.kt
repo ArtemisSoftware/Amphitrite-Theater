@@ -12,7 +12,8 @@ sealed class Destination(val route: String, val title: String) {
     data object Speedometer : Destination(route = "speedometer", title = "Speedometer")
     data object Battery : Destination(route = "battery", title = "Battery")
     data object Bubblesort : Destination(route = "bubblesort", title = "Bubblesort")
-    data object ThreeDGraph : Destination(route = "three_dimension_graph", title = "3DGraph")
+    data object ThreeDGraph : Destination(route = "three_dimension", title = "3DGraph")
+    data object ColorPalette : Destination(route = "color_palette", title = "Color Palette")
 
     companion object{
         val demos = listOf(
@@ -25,6 +26,7 @@ sealed class Destination(val route: String, val title: String) {
             Battery,
             Bubblesort,
             ThreeDGraph,
+            ColorPalette
         )
     }
 }
