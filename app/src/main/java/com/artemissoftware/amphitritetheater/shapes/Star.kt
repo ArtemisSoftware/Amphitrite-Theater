@@ -25,22 +25,6 @@ fun Star(
         val with = size.width
         val height = size.height
 
-//        val path = Path().apply {
-//            moveTo(with / 2, height / 4)
-//            lineTo(with / 2 + 150, height / 2 - 300)
-//            lineTo(with / 2 + 500, height / 2 - 300)
-//            lineTo(with / 2 + 250, height / 2 - 50)
-//            lineTo(with / 2 + 400, height - 900)
-//
-//            lineTo(with / 2, height / 2 + 100)
-//
-//            lineTo(with / 2 - 400, height - 900)
-//            lineTo(with / 2 - 250, height / 2 - 50)
-//            lineTo(with / 2 - 500, height / 2 - 300)
-//            lineTo(with / 2 - 150, height / 2 - 300)
-//            close()
-//        }
-
         val path = Path().apply {
             moveTo(with.toMeasure(50), 0F)
             lineTo(with.toMeasure(85), height)
