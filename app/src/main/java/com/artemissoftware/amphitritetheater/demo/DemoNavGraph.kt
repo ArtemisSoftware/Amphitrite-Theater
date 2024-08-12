@@ -19,6 +19,7 @@ import com.artemissoftware.amphitritetheater.battery.Battery
 import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteScreen
 import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteViewModel
 import com.artemissoftware.amphitritetheater.dynamictabselector.DynamicTabSelector
+import com.artemissoftware.amphitritetheater.shapes.ShapeScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
@@ -91,6 +92,9 @@ fun DemoNavGraph(
                     onTabSelected =  {}
                 )
             }
+        }
+        composable(route = Destination.Shapes.route) {
+            ShapeScreen()
         }
     }
 }
