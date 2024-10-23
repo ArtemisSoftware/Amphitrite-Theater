@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView PostMessage Example</title>
+</head>
+<body>
+<h1>PostMessage Communication</h1>
+<button id="sendMessageButton">Send Message to Android</button>
+
+<script>
+    document.getElementById("sendMessageButton").addEventListener("click", function() {
+        // Send message to the Android interface using postMessage-like API
+        Android.postMessageFromWeb("Hello from Web Page!");
+    });
+</script>
+</body>
+</html>
