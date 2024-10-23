@@ -18,14 +18,12 @@ import com.artemissoftware.amphitritetheater.animation.bubblesort.BubbleSortView
 import com.artemissoftware.amphitritetheater.colorpalette.ColorPaletteViewModel
 import com.artemissoftware.amphitritetheater.demo.DemoNavGraph
 import com.artemissoftware.amphitritetheater.ui.theme.AmphitriteTheaterTheme
-import com.artemissoftware.amphitritetheater.web.CustomWebViewModel
 import com.artemissoftware.amphitritetheater.web.webviewcustom.WebViewCustomViewModel
 
 class MainActivity : ComponentActivity() {
 
     private val bubbleSortViewModel = BubbleSortViewModel()
     private val colorPaletteViewModel by viewModels<ColorPaletteViewModel>()
-    private val customWebViewModel by viewModels<CustomWebViewModel>()
     private val webViewCustomViewModel by viewModels<WebViewCustomViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +36,6 @@ class MainActivity : ComponentActivity() {
                         DemoNavGraph(
                             colorPaletteViewModel = colorPaletteViewModel,
                             bubbleSortViewModel = bubbleSortViewModel,
-                            customWebViewModel = customWebViewModel,
                             webViewCustomViewModel = webViewCustomViewModel,
                             navController = rememberNavController(),
                         )

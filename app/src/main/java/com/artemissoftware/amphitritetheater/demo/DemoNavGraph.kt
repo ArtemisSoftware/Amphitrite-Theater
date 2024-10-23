@@ -21,7 +21,6 @@ import com.artemissoftware.amphitritetheater.shapes.ShapeScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
-import com.artemissoftware.amphitritetheater.web.CustomWebViewModel
 import com.artemissoftware.amphitritetheater.web.webbrowser.WebBrowserScreen
 import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
 import com.artemissoftware.amphitritetheater.web.webviewcustom.WebViewCustomScreen
@@ -32,7 +31,6 @@ fun DemoNavGraph(
     navController: NavHostController,
     bubbleSortViewModel: BubbleSortViewModel,
     colorPaletteViewModel: ColorPaletteViewModel,
-    customWebViewModel: CustomWebViewModel,
     webViewCustomViewModel: WebViewCustomViewModel
 ) {
     NavHost(
