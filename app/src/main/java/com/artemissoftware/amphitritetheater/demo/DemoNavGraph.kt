@@ -3,8 +3,6 @@ package com.artemissoftware.amphitritetheater.demo
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -23,46 +21,26 @@ import com.artemissoftware.amphitritetheater.shapes.ShapeScreen
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SHARED_ELEMENT_TRANSITION_GRAPH
 import com.artemissoftware.amphitritetheater.sharedelementtransition.navigation.SharedElementTransitionNavGraph
 import com.artemissoftware.amphitritetheater.threedimensiongraph.ThreeDimensionGraphScreen
+import com.artemissoftware.amphitritetheater.web.CustomWebViewModel
 import com.artemissoftware.amphitritetheater.web.webbrowser.WebBrowserScreen
 import com.artemissoftware.amphitritetheater.web.webview.WebViewScreen
+import com.artemissoftware.amphitritetheater.web.webviewcustom.WebViewCustomScreen
+import com.artemissoftware.amphitritetheater.web.webviewcustom.WebViewCustomViewModel
 
 @Composable
 fun DemoNavGraph(
     navController: NavHostController,
     bubbleSortViewModel: BubbleSortViewModel,
     colorPaletteViewModel: ColorPaletteViewModel,
+    customWebViewModel: CustomWebViewModel,
+    webViewCustomViewModel: WebViewCustomViewModel
 ) {
     NavHost(
         navController = navController,
         startDestination = Destination.Home.route,
     ) {
-        composable(route = Destination.Home.route) {
-            DemoSelectorScreen(navController)
-        }
 
-        composable(route = SHARED_ELEMENT_TRANSITION_GRAPH) {
-            SharedElementTransitionNavGraph(navController = rememberNavController())
-        }
-
-        composable(route = Destination.Counter.route) {
-            CounterApp()
-        }
-
-        composable(route = Destination.WebBrowser.route) {
-            WebBrowserScreen()
-        }
-
-        composable(route = Destination.WebView.route) {
-            WebViewScreen()
-        }
-
-        composable(route = Destination.Stopwatch.route) {
-            StopwatchScreen()
-        }
-
-        composable(route = Destination.Speedometer.route) {
-            SpeedometerScreen()
-        }
+        //B
 
         composable(route = Destination.Battery.route) {
             SingleContent {
@@ -79,6 +57,46 @@ fun DemoNavGraph(
         composable(route = Destination.BubbleSort.route) {
             BubbleSortScreen(viewmodel = bubbleSortViewModel)
         }
+
+        //Web
+
+        composable(route = Destination.WebBrowser.route) {
+            WebBrowserScreen()
+        }
+
+        composable(route = Destination.WebView.route) {
+            WebViewScreen()
+        }
+
+        composable(route = Destination.WebViewCustom.route) {
+            WebViewCustomScreen(webViewCustomViewModel)
+        }
+
+        //--
+
+        composable(route = Destination.Home.route) {
+            DemoSelectorScreen(navController)
+        }
+
+        composable(route = SHARED_ELEMENT_TRANSITION_GRAPH) {
+            SharedElementTransitionNavGraph(navController = rememberNavController())
+        }
+
+        composable(route = Destination.Counter.route) {
+            CounterApp()
+        }
+
+
+
+        composable(route = Destination.Stopwatch.route) {
+            StopwatchScreen()
+        }
+
+        composable(route = Destination.Speedometer.route) {
+            SpeedometerScreen()
+        }
+
+
         composable(route = Destination.ThreeDGraph.route) {
             ThreeDimensionGraphScreen()
         }

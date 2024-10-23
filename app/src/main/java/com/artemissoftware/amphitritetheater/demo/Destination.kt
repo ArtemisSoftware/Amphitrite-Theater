@@ -16,6 +16,7 @@ sealed class Destination(val route: String, val title: String) {
     data object ColorPalette : Destination(route = "color_palette", title = "Color Palette")
     data object DynamicTabSelector : Destination(route = "dynamic_tab_selector", title = "Dynamic Tab Selector")
     data object Shapes : Destination(route = "shapes", title = "Shapes")
+    data object WebViewCustom : Destination(route = "web_view_custom", title = "Web View Custom")
 
     companion object{
         val demos = listOf(
@@ -30,7 +31,8 @@ sealed class Destination(val route: String, val title: String) {
             ThreeDGraph,
             ColorPalette,
             DynamicTabSelector,
-            Shapes
-        )
+            Shapes,
+            WebViewCustom
+        ).sortedBy { it.title }
     }
 }
